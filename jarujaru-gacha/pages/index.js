@@ -32,19 +32,20 @@ export default function Home() {
 
   return (
     <>
-      <h1 className={styles.title}>ジャルジャルの奴ガチャ作る奴</h1>
+      <h1 className={styles.pageTitle}>ジャルジャルの奴ガチャ</h1>
       <div className={styles.videoContainer}>
         <div id="video" className={styles.video}>
           {video}
         </div>
       </div>
+      <h2 className={styles.videoTitle}>〇〇な奴</h2>
       <div className={styles.buttonContainer}>
         <button
           className={styles.yatsuButton}
           type='button'
           onClick={yatcuButtonClick}
         >
-          奴
+          ガチャる奴
         </button>
       </div>
     </>
