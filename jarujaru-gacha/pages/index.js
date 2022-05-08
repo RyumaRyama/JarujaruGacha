@@ -1,6 +1,8 @@
 import { createElement, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import honkiNeta from '../public/video_ids/honki_neta.json';
+import bonNo from '../public/video_ids/bon_no.json';
+import netaNoTane from '../public/video_ids/neta_no_tane.json';
 
 export default function Home() {
   const createVideoIframe = (id) => {
@@ -18,9 +20,14 @@ export default function Home() {
   const [video, setVideo] = useState(createVideoIframe('NE7uHTxUJgM'));
 
   const yatcuButtonClick = () => {
-    const videoNum = honkiNeta.length;
+    const videoList = [
+      ...honkiNeta,
+      ...bonNo,
+      ...netaNoTane,
+    ]
+    const videoNum = videoList.length;
     const index = Math.floor(Math.random() * videoNum);
-    setVideo(createVideoIframe(honkiNeta[index]));
+    setVideo(createVideoIframe(videoList[index]));
   }
 
   return (
