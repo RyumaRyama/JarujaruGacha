@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.videoTitle}>
-        <h2>〇〇な奴</h2>
+        <h2>チャラ男番長っていう奴</h2>
       </div>
       <div className={styles.buttonContainer}>
         <button

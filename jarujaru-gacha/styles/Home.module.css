@@ -27,7 +27,8 @@
 .videoTitle > h2 {
   margin: 0;
   color: white;
-  filter: drop-shadow(0 0 1.9px black)
+  filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.5));
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .video {
