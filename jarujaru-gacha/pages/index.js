@@ -18,6 +18,7 @@ export default function Home() {
   }
 
   const [video, setVideo] = useState(createVideoIframe('NE7uHTxUJgM'));
+  const [videoTitle, setVideoTitle] = useState('チャラ男番長っていう奴');
 
   const yatcuButtonClick = () => {
     const videoList = [
@@ -27,7 +28,15 @@ export default function Home() {
     ]
     const videoNum = videoList.length;
     const index = Math.floor(Math.random() * videoNum);
-    setVideo(createVideoIframe(videoList[index]));
+    const videoData = videoList[index]
+
+    const id = videoData.contentDetails.videoId;
+    setVideo(createVideoIframe(id));
+
+    const titleAll = videoData.snippet.title;
+    const regex = /.*『(.*)』.*/;
+    const title = titleAll.match(regex)[1];
+    setVideoTitle(title);
   }
 
   return (
@@ -50,7 +59,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.videoTitle}>
-        <h2>チャラ男番長っていう奴</h2>
+        <h2>{videoTitle}</h2>
       </div>
       <div className={styles.buttonContainer}>
         <button
