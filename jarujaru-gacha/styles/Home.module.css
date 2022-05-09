@@ -1,16 +1,33 @@
+.content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+}
+
 .pageTitle {
-  text-align: center;
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  margin: 0;
+  font-size: 12px;
+}
+
+.pageTitle > h1 {
+  margin: 0;
 }
 
 .videoTitle {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  height: 10%;
+  font-size: 15px;
 }
 
-.videoContainer {
-  margin: auto;
+.videoTitle > h2 {
+  margin: 0;
+  color: white;
+  filter: drop-shadow(0 0 1.9px black)
 }
 
 .video {
@@ -48,7 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 30%;
 }
 
 .yatsuButton {

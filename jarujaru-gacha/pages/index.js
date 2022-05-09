@@ -31,14 +31,27 @@ export default function Home() {
   }
 
   return (
-    <>
-      <h1 className={styles.pageTitle}>ジャルジャルの奴ガチャ</h1>
+    <div className={styles.content}>
+      <style global jsx>{`
+        html,
+        body,
+        body > div:first-child,
+        div#__next,
+        div#__next > div {
+          height: 100%;
+        }
+      `}</style>
+      <div className={styles.pageTitle}>
+        <h1>ジャルジャルの奴ガチャ</h1>
+      </div>
       <div className={styles.videoContainer}>
         <div id="video" className={styles.video}>
           {video}
         </div>
       </div>
-      <h2 className={styles.videoTitle}>〇〇な奴</h2>
+      <div className={styles.videoTitle}>
+        <h2>〇〇な奴</h2>
+      </div>
       <div className={styles.buttonContainer}>
         <button
           className={styles.yatsuButton}
@@ -48,6 +61,6 @@ export default function Home() {
           ガチャる奴
         </button>
       </div>
-    </>
+    </div>
   )
 }
